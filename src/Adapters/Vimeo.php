@@ -15,7 +15,7 @@ class Vimeo extends Webpage
      */
     public static function check(Response $response)
     {
-        return $response->isValid([200, 403, 426]) && $response->getUrl()->match([
+        return $response->isValid([200, 403, 429]) && $response->getUrl()->match([
             'vimeo.com/*',
         ]);
     }
